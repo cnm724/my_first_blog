@@ -1,0 +1,12 @@
+.rows {
+    display: flex;
+    
+}
+
+input {
+    width: 500px;
+}
+
+#content {
+    height: 150px;
+}
