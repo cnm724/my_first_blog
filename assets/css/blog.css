@@ -1,28 +1,28 @@
 /* primary/default attributes */
-:root{
-    --textcolor:black;
+:root {
+    --textcolor: black;
     --primarybg: #ece6ff;
     --backbutton: rgb(177, 175, 175);
     --bordercolor: black;
 }
 
 /* dark mode atttributes */
-[dataTheme = "dark"]{
+[dataTheme="dark"] {
     --primarybg: #5c5961;
-    --textcolor:#ffff;
+    --textcolor: #ffff;
     --backbutton: #ffff;
 }
 
-*{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--textcolor);
 }
 
-  body {
+body {
     margin: 0;
     padding: 0;
     background-color: var(--primarybg);
-  }
+}
 
 nav {
     padding: 30px;
@@ -43,9 +43,18 @@ nav img {
 
 .blogArea div {
     border: dotted;
-    margin:  5px;
+    margin: 5px;
+    padding: 0px 0px 5px 10px;
+    text-align: center;
 }
-#blogFooter{
+
+.blogArea div h5 {
+    text-align: left;
+    margin: 0px;
+    padding: 3px; 
+}
+
+#blogFooter {
     border-top-style: solid;
     border-color: var(--bordercolor);
     padding: 20px;
@@ -53,12 +62,12 @@ nav img {
     width: 97.5%;
     /* keeps footer at the bottom of the page */
     position: fixed;
-    bottom: 0; 
+    bottom: 0;
     background-color: var(--primarybg);
- }
+}
 
-#blogFooter a{
+#blogFooter a {
     font-size: 16px;
     padding: 10px;
     text-decoration: none;
-} 
+}

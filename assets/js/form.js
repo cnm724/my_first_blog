@@ -15,16 +15,16 @@ submitInputButton.addEventListener("click", function (event) {
     if (username === "" || title === "" || content === "") {
         alert("Please complete form before submitting");
     } else {
-
+        //creates inputs into an obejct
         let blogPosts = {
             username,
             title,
             content
         }
-
+        //gets inputs from local storage and creates an array
         let blogEntries = JSON.parse(localStorage.getItem("blogPosts")) || [];
         blogEntries.push(blogPosts);
-
+        //sets items to local storage as variable blocEntries, can be pulled on blog.js
         localStorage.setItem("blogPosts", JSON.stringify(blogEntries));
 
         //directs me to where the posts are listed

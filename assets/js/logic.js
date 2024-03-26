@@ -27,7 +27,7 @@ window.onload = () => {
     setTheme(savedTheme)
 }
 
-//function that only goes to post page *xpert
+//function that only goes to blog post page *xpert
 function goToNextPage() {
     window.location.href = "blog.html"
 }

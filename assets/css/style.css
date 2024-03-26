@@ -1,3 +1,4 @@
+/* primary/default attributes */
 :root{
     --textcolor:black;
     --primarybg: #ece6ff;
@@ -6,6 +7,7 @@
     --nextpg: rgb(177, 175, 175);
 }
 
+/* dark mode atttributes */
 [dataTheme = "dark"]{
     --primarybg: #5c5961;
     --textcolor:#ffff;
