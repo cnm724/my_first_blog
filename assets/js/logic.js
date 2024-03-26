@@ -3,7 +3,7 @@ const toggleButton = document.querySelector("#toggle")
 
 toggleButton.addEventListener("click", function(event){
     event.preventDefault();
-
+    
     //
     const body = document.body
     const currentTheme = body.getAttribute("dataTheme")
@@ -25,4 +25,9 @@ function getTheme(){
 window.onload = () => {
     const savedTheme = getTheme()
     setTheme(savedTheme)
+}
+
+//function that only goes to post page *xpert
+function goToNextPage() {
+    window.location.href = "blog.html"
 }

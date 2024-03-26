@@ -1,55 +1,64 @@
+/* primary/default attributes */
 :root{
-    --light: #ffff;
+    --textcolor:black;
     --primarybg: #ece6ff;
+    --backbutton: rgb(177, 175, 175);
+    --bordercolor: black;
 }
 
+/* dark mode atttributes */
 [dataTheme = "dark"]{
     --primarybg: #5c5961;
+    --textcolor:#ffff;
+    --backbutton: #ffff;
 }
 
 *{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--primarybg);
+    color: var(--textcolor);
 }
 
-/* xpert */
-html {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  /* xpert */
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--primarybg);
   }
 
 nav {
     padding: 30px;
     border-bottom-style: solid;
+    border-color: var(--bordercolor);
 }
 
 nav a button {
-    background-color: grey;
+    background-color: var(--backbutton);
+    color: var(--bordercolor);
 }
 
 nav img {
-    background-image: url("/assets/images/bulb_on.png");
     width: 25px;
     float: right;
     cursor: pointer;
 }
-footer{
+
+.blogArea div {
+    border: dotted;
+    margin:  5px;
+}
+#blogFooter{
     border-top-style: solid;
+    border-color: var(--bordercolor);
     padding: 20px;
     text-align: center;
     width: 97.5%;
-    /* keeps footer at the bottom of the page -xpert */
-    position: absolute;
-    bottom: 0;
-}
-footer a{
+    /* keeps footer at the bottom of the page */
+    position: fixed;
+    bottom: 0; 
+    background-color: var(--primarybg);
+ }
+
+#blogFooter a{
     font-size: 16px;
     padding: 10px;
     text-decoration: none;
-}
+} 

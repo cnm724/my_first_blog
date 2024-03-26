@@ -26,7 +26,7 @@ submitInputButton.addEventListener("click", function (event) {
         blogEntries.push(blogPosts);
 
         localStorage.setItem("blogPosts", JSON.stringify(blogEntries));
-        
+
         //directs me to where the posts are listed
         window.location.href = "blog.html";
     }

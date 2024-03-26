@@ -1,16 +1,22 @@
 :root{
-    --light: #ffff;
+    --textcolor:black;
     --primarybg: #ece6ff;
-    
+    --button: white;
+    --bordercolor: black;
+    --nextpg: rgb(177, 175, 175);
 }
 
 [dataTheme = "dark"]{
     --primarybg: #5c5961;
+    --textcolor:#ffff;
+    --button: black;
+    --nextpg: #ffff;
 }
 
 *{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--primarybg);
+    color: var(--textcolor);
 }
 
 html {
@@ -20,10 +26,14 @@ html {
 nav {
     padding: 30px;
     border-bottom-style: solid;
+    border-color: var(--bordercolor);
+}
+nav button {
+    background-color: var(--nextpg);
+    color: var(--bordercolor);
 }
 
-nav img {
-    background-image: url("/assets/images/bulb_on.png");
+#toggle img {
     width: 25px;
     float: right;
     cursor: pointer;
@@ -35,7 +45,8 @@ nav img {
     margin:  2px;
     border-style: solid;
     border-radius: 5px;
-    border-color: black;
+    border-color: var(--bordercolor);
+   
 }
 
 .titleimg img{
@@ -48,10 +59,15 @@ nav img {
     text-align: center;
 }
 
+#blogInput input, textarea {
+    color: black;
+}
+
 #submit{
     border-radius: 5px;
     margin: 5px;
-    background-color: var(--light);
+    background-color: var(--button);
+    color: var(--textcolor);
     cursor: pointer;
     border: none;
     height: 30px;
@@ -68,6 +84,7 @@ nav img {
 
 #landingPg {
     border-top-style: solid;
+    border-color: var(--bordercolor);
     padding: 20px;
     height: 20px;
     text-align: center;
