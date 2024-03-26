@@ -1,27 +1,79 @@
-*{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+:root{
+    --light: #ffff;
+    --primarybg: #ece6ff;
+    
 }
 
-body {
-    align-items: center;
+[dataTheme = "dark"]{
+    --primarybg: #5c5961;
+}
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--primarybg);
+}
+
+html {
+    background-color: var(--primarybg);
 }
 
 nav {
-    background-color: #ffff;
     padding: 30px;
+    border-bottom-style: solid;
+}
+
+nav img {
+    background-image: url("/assets/images/bulb_on.png");
+    width: 25px;
+    float: right;
+    cursor: pointer;
 }
 
 .titleimg{
+    width: 100%;
     padding: 15px;
     margin:  2px;
     border-style: solid;
+    border-radius: 5px;
     border-color: black;
 }
 
-img {
-    background-image: url("/assets/images/bulb_on.png");
-    width: 20px; 
-    float: right;
-    display: flex;
-    justify-content: flex-start;
+.titleimg img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.titleimg h1{
+    text-align: center;
+}
+
+#submit{
+    border-radius: 5px;
+    margin: 5px;
+    background-color: var(--light);
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    width: 100%;
+}
+
+#submit:hover{
+    opacity: 0.8;
+}
+
+#submit:active{
+    opacity: 0.7;
+}
+
+#landingPg {
+    border-top-style: solid;
+    padding: 20px;
+    height: 20px;
+    text-align: center;
+}
+#landingPg a{
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
 }

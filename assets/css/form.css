@@ -1,11 +1,35 @@
+:root{
+    --white: #ffff;
+    --padbottom: 8px;
+    --rounded: 5px;
+    --highlight: #fff5e691;
+}
+
+
 .rows {
     display: flex;
 }
 
 input {
-    width: 500px;
+    width: 100%;
+    height: 30px;
+    border-radius: var(--rounded);
+    background-color: var(--white);
+    padding-bottom: var(--padbottom);
+}
+
+input:focus {
+    background-color: var(--highlight);
 }
 
 #content {
-    height: 150px;
+    background-color: var(--white);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--rounded);
+    padding-bottom: var(--padbottom);
+}
+
+#content:focus {
+    background-color: var(--highlight);
 }

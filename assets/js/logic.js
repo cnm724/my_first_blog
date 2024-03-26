@@ -1,34 +1,28 @@
-const usernameInput = document.querySelector("#username");
-const titleInput = document.querySelector("#title");
-const contentInput = document.querySelector("#content");
-const submitInputButton = document.querySelector("#submit")
+//light and dark mode
+const toggleButton = document.querySelector("#toggle")
 
-
-submitInputButton.addEventListener("click", function (event) {
+toggleButton.addEventListener("click", function(event){
     event.preventDefault();
-    //sets users inputed values to variables
-    const username = usernameInput.value;
-    const title = titleInput.value;
-    const content = contentInput.value;
 
-    //prompt user to finish form before moving on   
-    if (username === "" || title === "" || content === "") {
-        alert("Please complete form before submitting");
-    } else {
+    //
+    const body = document.body
+    const currentTheme = body.getAttribute("dataTheme")
+    //ternary operator, switches back from light and dark
+    const newTheme = currentTheme === "light" ? "dark" : "light"
+    body.setAttribute("dataTheme", newTheme)
+    localStorage.setItem("theme", newTheme)
+})
 
-        let blogPosts = {
-            username,
-            title,
-            content
-        }
+function setTheme(theme) {
+    document.body.setAttribute("dataTheme", theme);
+    localStorage.setItem("theme", theme);
+}
 
-        let blogEntries = JSON.parse(localStorage.getItem("blogPosts")) || [];
-        blogEntries.push(blogPosts);
+function getTheme(){
+    return localStorage.getItem("theme") || "light";
+}
 
-        localStorage.setItem("blogPosts", JSON.stringify(blogEntries));
-        
-        //directs me to where the posts are listed
-        window.location.href = "blog.html";
-    }
-});
-
+window.onload = () => {
+    const savedTheme = getTheme()
+    setTheme(savedTheme)
+}

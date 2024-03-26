@@ -1,3 +1,55 @@
+:root{
+    --light: #ffff;
+    --primarybg: #ece6ff;
+}
+
+[dataTheme = "dark"]{
+    --primarybg: #5c5961;
+}
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--primarybg);
+}
+
+/* xpert */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  /* xpert */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+nav {
+    padding: 30px;
+    border-bottom-style: solid;
+}
+
 nav a button {
     background-color: grey;
+}
+
+nav img {
+    background-image: url("/assets/images/bulb_on.png");
+    width: 25px;
+    float: right;
+    cursor: pointer;
+}
+footer{
+    border-top-style: solid;
+    padding: 20px;
+    text-align: center;
+    width: 97.5%;
+    /* keeps footer at the bottom of the page -xpert */
+    position: absolute;
+    bottom: 0;
+}
+footer a{
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
 }
